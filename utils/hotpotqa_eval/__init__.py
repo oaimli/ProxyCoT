@@ -1,0 +1,1 @@
+# HotpotQA evaluation, actually used in model_eval.py
