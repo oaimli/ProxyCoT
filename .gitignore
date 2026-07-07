@@ -1,0 +1,5 @@
+/reasoning/openrlhf/checkpoint_scitrek/
+/teacher_proxy/scitrek_bridge_qwen3_235b_a22b_thinking_0527_dev.jsonl
+/teacher_proxy/scitrek_bridge_qwen3_235b_a22b_thinking_0527_train.jsonl
+/preparation/hotpotqa/extended_hotpotqa/*.jsonl
+/grounding/scitrek_data_reinforcement_gemma_alex/
