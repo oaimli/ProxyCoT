@@ -1,0 +1,2 @@
+# use a teacher model to generate reasoning traces based on database tables for SciTrek
+# these reasoning traces heavily rely on the table structure, so they cannot be used as reasoning traces for the full contexts
