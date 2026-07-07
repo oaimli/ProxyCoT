@@ -1,0 +1,1 @@
+# training the model directly with supervised fine-tuning based on full contexts, without reasoning traces
