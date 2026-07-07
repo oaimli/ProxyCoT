@@ -1,0 +1,34 @@
+deepspeed --module openrlhf.cli.train_sft \
+          --save_path ./output_scitrek_gemma \
+          --save_steps 25 \
+          --save_hf_ckpt \
+          --ckpt_path ./checkpoint_scitrek_gemma \
+          --logging_steps 5 \
+          --eval_steps 50 \
+          --max_ckpt_num 1 \
+          --max_len 65536 \
+          --dataset ./scitrek_data_gemma/train.jsonl \
+          --eval_dataset ./scitrek_data_gemma/dev.jsonl \
+          --input_key messages \
+          --train_batch_size 32 \
+          --micro_train_batch_size 1 \
+          --max_samples 1000000 \
+          --pretrain google/gemma-3-4b-it \
+          --seed 42 \
+          --zero_stage 2 \
+          --max_epochs 3 \
+          --packing_samples \
+          --bf16 \
+          --flash_attn \
+          --learning_rate 2e-6 \
+          --lr_warmup_ratio 0.05 \
+          --lr_scheduler cosine_with_min_lr \
+          --gradient_checkpointing \
+          --use_liger_kernel \
+          --ds_tensor_parallel_size 1 \
+          --adam_offload \
+          --ring_attn_size 4 \
+          --apply_chat_template \
+          --wandb_project longtune \
+          --wandb_run_name reasoning_distillation_gemma \
+          --use_wandb 89fc8b0a9054e79e977cbfd14e2804d4022701d0

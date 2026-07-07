@@ -1,0 +1,59 @@
+#!/bin/sh
+SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
+ray job submit --address="http://127.0.0.1:8265" \
+   --runtime-env-json='{"working_dir": "./working_qwen"}' \
+   -- python3 -m openrlhf.cli.train_ppo_ray \
+   --ref_num_nodes 0 \
+   --ref_num_gpus_per_node 0 \
+   --critic_num_nodes 0 \
+   --critic_num_gpus_per_node 0 \
+   --actor_num_nodes 1 \
+   --actor_num_gpus_per_node 4 \
+   --vllm_num_engines 4 \
+   --vllm_tensor_parallel_size 1 \
+   --pretrain Qwen/Qwen3-4B-Instruct-2507 \
+   --remote_rm_url $SCRIPT_DIR/reward_mix_hotpotqa.py \
+   --save_path $SCRIPT_DIR/output_hotpotqa_qwen \
+   --ckpt_path $SCRIPT_DIR/checkpoint_hotpotqa_qwen \
+   --max_ckpt_num 1 \
+   --micro_train_batch_size 16 \
+   --train_batch_size 64 \
+   --micro_rollout_batch_size 16 \
+   --rollout_batch_size 64 \
+   --max_samples 100000 \
+   --max_epochs 1 \
+   --num_episodes 10 \
+   --prompt_max_len 4096 \
+   --generate_max_len 2048 \
+   --zero_stage 2 \
+   --bf16 \
+   --actor_learning_rate 5e-6 \
+   --init_kl_coef 0.0 \
+   --prompt_data json@$SCRIPT_DIR/hotpotqa_data/ \
+   --eval_dataset json@$SCRIPT_DIR/hotpotqa_data/ \
+   --input_key messages \
+   --label_key answer \
+   --apply_chat_template \
+   --normalize_reward \
+   --advantage_estimator group_norm \
+   --n_samples_per_prompt 8 \
+   --packing_samples \
+   --dynamic_filtering \
+   --dynamic_filtering_reward_range 0.3 2.0 \
+   --eps_clip_low_high 0.2 0.3 \
+   --eval_n_samples_per_prompt 1 \
+   --use_liger_kernel \
+   --attn_implementation flash_attention_2 \
+   --gradient_checkpointing \
+   --enable_prefix_caching \
+   --vllm_gpu_memory_utilization 0.6 \
+   --save_steps 10 \
+   --eval_steps 20 \
+   --eval_split validation \
+   --vllm_sync_backend nccl \
+   --colocate_all_models \
+   --vllm_enable_sleep \
+   --deepspeed_enable_sleep \
+   --wandb_run_name reasonging_grpo_qwen_hotpotqa \
+   --wandb_project longtune \
+   --use_wandb 89fc8b0a9054e79e977cbfd14e2804d4022701d0
