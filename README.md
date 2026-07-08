@@ -132,3 +132,22 @@ For trained models, please download them from Hugging Face and run them with our
 - Long-context RL (Qwen3-4B-Instruct) on HotpotQA: the most expensive training, RLVR on long contexts, the final model ([Hugging Face: oaimli/longtune_hotpotqa_simple_rl_qwen](https://huggingface.co/oaimli/longtune_hotpotqa_simple_rl_qwen))
 
 You can download the out-of-domain results from [Google Drive](https://drive.google.com/file/d/1MtyTBSx6AUI0h1PoCeBMgZbPahAuQw0D/view?usp=sharing), and evaluate them with the metrics under ProxyCoT/ood/.
+
+If you are going to use the ideas, data, or models, please cite our paper:
+
+[Li et al. 2026] Miao Li, Irina Saparina, Alexander Gurung, Mirella Lapata. "Long-Context Reasoning Through Proxy-Based Chain-of-Thought Tuning". ACL, 2026.
+```
+@inproceedings{proxycot_2026,
+  title={Long-Context Reasoning Through Proxy-Based Chain-of-Thought Tuning},
+  author = "Li, Miao and Saparina, Irina and Gurung, Alexander and Lapata, Mirella",
+  booktitle = "Proceedings of the 64th Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics (Volume 1: Long Papers)",
+  month = jul,
+  year = "2026",
+  address = "San Diego, California, United States",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/2026.acl-long.1917/",
+  doi = "10.18653/v1/2026.acl-long.1917",
+  pages = "41335--41347",
+  ISBN = "979-8-89176-390-6"
+}
+```
