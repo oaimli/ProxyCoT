@@ -27,6 +27,9 @@
 ├── utils/answer_eval.py            --> (Evaluation code for HotpotQA based on Model-as-Judge)
 └── README.md                       --> (This readme file)
 ```
+Implementation of ProxyCoT:
+- ProxyCoT-RL: code in reasoning + grounding
+- ProxyCoT-ZS: code in teacher_proxy + grounding
 
 ### Dataset preparation
 
