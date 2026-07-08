@@ -1,0 +1,16 @@
+You are given multiple articles.
+
+
+<articles>
+
+
+Based on the above articles, answer the question below.
+
+If the answer consists of multiple components (e.g., author names, article titles, reference counts), separate them with commas.
+For example, if the answer includes two author names, your response should be in the format of 'the-first-author-name, the-second-author-name'.
+
+Please reason step by step, and put your final answer within \boxed{}. If you cannot get the answer from the provided context, just return 'NULL'.
+
+Question:
+
+<question>

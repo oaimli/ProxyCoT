@@ -1,0 +1,7 @@
+Answer the question below.
+
+Question:
+
+<question>
+
+Please reason step by step, and put your final answer without any formatting within \boxed{}.
