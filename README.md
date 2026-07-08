@@ -77,3 +77,24 @@ for sample in train_samples:
     instruction_full = instruction_full.replace("<articles>", "\n\n\n".join(articles))
     conversation_full = [{"role": "user", "content": instruction_full}]
 ```
+### Experimental environment preparation
+
+Our experiments require the following libraries:
+
+```bash
+transformers==4.57.3
+vllm==0.13.0
+jsonlines==4.0.0
+torch==2.9.0
+datasets==4.5.0
+wandb==0.24.0
+liger-kernel==0.6.4
+flash_attn==2.8.3
+ring-flash-attn==0.1.8
+bitsandbytes==0.48.2
+accelerate==1.12.0
+openrlhf==0.9.1
+deepspeed==0.18.3
+ray[default]==2.48.0
+```
+If you have issues in running OpenRLHF-0.9.1, please use our customised OpenRLHF for the project, [Qwen3](https://github.com/oaimli/OpenRLHF/tree/0.9.1-qwen3-all), [Gemma3-GRPO](https://github.com/oaimli/OpenRLHF/tree/0.9.1-gemma3-grpo), and [Gemma3-SFT](https://github.com/oaimli/OpenRLHF/tree/0.9.1-gemma3-sft). 
