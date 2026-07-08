@@ -131,7 +131,7 @@ For trained models, please download them from Hugging Face and run them with our
 
 - Long-context RL (Qwen3-4B-Instruct) on HotpotQA: the most expensive training, RLVR on long contexts, the final model ([Hugging Face: oaimli/longtune_hotpotqa_simple_rl_qwen](https://huggingface.co/oaimli/longtune_hotpotqa_simple_rl_qwen))
 
-You can download the out-of-domain results from [Google Drive](https://drive.google.com/file/d/1MtyTBSx6AUI0h1PoCeBMgZbPahAuQw0D/view?usp=sharing), and evaluate them with the metrics under ProxyCoT/ood/.
+You can download the out-of-domain results from [Google Drive](https://drive.google.com/file/d/1MtyTBSx6AUI0h1PoCeBMgZbPahAuQw0D/view?usp=sharing), and evaluate them with the metrics under ProxyCoT/ood/ following loong_eval/README.md and loong_eval/\_\_init\_\_.py.
 
 ### Acknowledgment
 
