@@ -133,6 +133,8 @@ For trained models, please download them from Hugging Face and run them with our
 
 You can download the out-of-domain results from [Google Drive](https://drive.google.com/file/d/1MtyTBSx6AUI0h1PoCeBMgZbPahAuQw0D/view?usp=sharing), and evaluate them with the metrics under ProxyCoT/ood/.
 
+### Acknowledgment
+
 If you are going to use the ideas, data, or models, please cite our paper:
 
 [Li et al. 2026] Miao Li, Irina Saparina, Alexander Gurung, Mirella Lapata. "Long-Context Reasoning Through Proxy-Based Chain-of-Thought Tuning". ACL, 2026.
