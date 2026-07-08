@@ -1,1 +1,1 @@
-# example proxy contexts for HotpotQA and SciTrek
+# manually check the example proxy contexts for HotpotQA and SciTrek
