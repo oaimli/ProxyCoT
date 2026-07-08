@@ -32,6 +32,14 @@ To run the experiments for ProxyCoT, you need to first download the data for Sci
 - For SciTrek, clone the repo and download the data following the instructions in https://github.com/oaimli/SciTrek.
 - For HotpotQA, download the data from [Google Drive](https://drive.google.com/drive/folders/13Ia7sQapLQbBoBWizAMLrVdxsC2TxtIQ?usp=sharing), and replace ProxyCoT/preparation/hotpotqa/extended_hotpotqa with the downloaded folder of extended_hotpotqa. Please refer to our paper for more details on how we extended HotpotQA.
 
+All our prompt templates can be found in /ProxyCoT/instructions. Basically, we have chain-of-thought (CoT) prompts for both proxy contexts and full contexts for evaluation and training, except for simple_sft.
+
+- instruction_full_hotpotqa.txt: chain-of-thought prompt template on full contexts for HotpotQA
+- instruction_full_scitrek.txt: chain-of-thought prompt template on full contexts for SciTrek
+- instruction_none_hotpotqa.txt: chain-of-thought prompt template on none contexts for HotpotQA
+- instruction_proxy_hotpotqa.txt: chain-of-thought prompt template on proxy contexts for HotpotQA
+- instruction_proxy_scitrek.txt: chain-of-thought prompt template on proxy contexts for SciTrek
+
 The two datasets can also be downloaded from Hugging Face for further use. This is only for further use of the datasets, not reproduction of our experiments.
 
 ```python
