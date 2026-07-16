@@ -135,7 +135,7 @@ You can download the out-of-domain results from [Google Drive](https://drive.goo
 
 ### Acknowledgment
 
-If you are going to use the ideas, data, or models, please cite our paper:
+If you are going to use our training framework, data, or models, please cite our paper:
 
 [Li et al. 2026] Miao Li, Irina Saparina, Alexander Gurung, Mirella Lapata. "Long-Context Reasoning Through Proxy-Based Chain-of-Thought Tuning". ACL, 2026.
 ```
